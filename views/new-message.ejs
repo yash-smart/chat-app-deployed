@@ -28,7 +28,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script>
-    const socket = new WebSocket("ws://192.168.31.103:5000");
+    const socket = new WebSocket("wss://chat-app-deployed-2hz5.onrender.com");
     socket.addEventListener("open", (event) => {
         console.log('Connected to server')
         socket.send('2'+document.getElementById('user_id').textContent);

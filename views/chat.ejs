@@ -109,7 +109,7 @@
         console.log(date)
         time_arr[i].textContent = date.getDate() + ' ' + date.toLocaleString('default',{month: 'long'}) + ' ' + date.getFullYear() + ' ' + date.getHours() + ':' +date.getMinutes();
     }
-    const socket = new WebSocket("ws://192.168.31.103:5000");
+    const socket = new WebSocket("wss://chat-app-deployed-2hz5.onrender.com");
     socket.addEventListener("open", (event) => {
         console.log('Connected to server')
         socket.send('2'+JSON.stringify([document.getElementById('user_id').textContent,document.getElementById('second_user').textContent]));
