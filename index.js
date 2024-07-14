@@ -11,7 +11,7 @@ import WebSocket,{WebSocketServer} from "ws";
 env.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 // const host = '192.168.31.103';
 
 const db = new pg.Client({
